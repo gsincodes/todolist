@@ -1,3 +1,127 @@
-body{
-    background-color: rebeccapurple;
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#fullscreen{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template: 100px 1fr 1fr 100px / min(30vw,300px) 1fr;
+}
+
+#halfscreen{
+    background-color: #d1d1d1;
+    /* border: 1px solid black; */
+    grid-area: 2/2/3/3;
+    z-index: -1;
+}
+
+#halfscreen2{
+    grid-area: 3/2/4/3;
+    /* border: 1px solid black; */
+    z-index: -1;
+}
+
+#sidebar{
+    background-color: #95D2B3;
+    grid-area: 1/1/5/2;
+    display: grid;
+    grid-template: 100px 1fr / 1fr;
+}
+
+#logo{
+    grid-row: 1/2;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    font-size:xx-large;
+    font-style: italic;
+    font-weight: bolder;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #7fb399;
+}
+
+#new-project-btn{
+    height: 90px;
+    width: 200px;
+    position: absolute;
+    left: 50px;
+    bottom: 100px;
+    border-radius: 20px;
+    font-size: large;
+}
+
+#navbar{
+    grid-area: 1/2/2/3;
+    background-color: #D8EFD3;
+    display: grid;
+    align-items: center;
+}
+
+#navbar>ul{
+    display: flex;
+    justify-content:space-evenly;
+}
+
+#navbar>ul>li{
+    color: black;
+    display: inline;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#content{
+    display: grid;
+    grid-area: 2/2/4/3;
+}
+
+#TODOS{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    overflow-y: auto;
+    gap: 8px;
+    padding: 8px;
+    max-height: 797px;
+    margin: 8px;
+}
+
+.todo{
+    background-color: yellow;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 390px;
+}
+
+#ghost-page{
+    grid-area: 2/2/4/3;
+    z-index: 0;
+}
+
+#buttons{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+#new-todo-btn{
+    background-color: rgb(94, 94, 255);
+    color: white;
+    height: 90px;
+    width: 90px;
+    border-radius: 45px;
+    position: absolute;
+    bottom: 120px;
+    right: 50px;
+    font-size: large;
+}
+
+#footer{
+    background-color: #448f80;
+    grid-area: 4/2/5/3;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    display: grid;
+    align-items: center;
 }
