@@ -27,3 +27,16 @@ class defaultProject{
 
 const DP = new defaultProject(newTodo);
 console.log(DP);
+
+const new_todo_btn = document.querySelector("#new-todo-btn");
+
+const form = document.querySelector("#myForm");
+
+new_todo_btn.addEventListener("click", function(){
+    if(form.style.display === "none"){
+        form.style.display = "block";
+    }
+    else{
+        form.style.display = "none";
+    }
+});
