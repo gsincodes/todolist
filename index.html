@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script defer src="main.js"></script></head>
+<body>
+    <div id="fullscreen">
+        <div id="navbar">
+            <ul>
+                <li>Home</li>
+                <li>Quicklinks</li>
+                <li>About</li>
+            </ul>
+        </div>
+        <div id="sidebar">
+            <div id="logo">TASK MASTER</div>
+            <div id="sidebar-menu">
+                <div class="sidebar-menu-item">Default Project</div>
+                <div class="sidebar-menu-item">Default Project</div>
+            </div>
+            <button id="new-project-btn">New Project</button>
+        </div>
+        <div id="halfscreen">
+        </div>
+        <div id="halfscreen2">
+        </div>
+        <div id="content">
+            <div id="TODOS">
+                <div class="todo"></div>
+                <div class="todo"></div>
+                <div class="todo"></div>
+                <div class="todo"></div>
+                <div class="todo"></div>
+                <div class="todo"></div>
+                <div class="todo"></div>
+                <div class="todo"></div>
+                <div class="todo"></div>
+                <div class="todo"></div>
+            </div>
+            <button id="new-todo-btn">new ToDo</button>
+        </div>
+        <div id="form-container">
+                <form action="/my-handling-form-page" method="post" id="myForm">
+                <p>
+                    <label for="title">Title:</label>
+                    <input type:"text" id="name" name="title" value="title">
+                </p>
+                <!-- <p>
+                    <label for="mail">Email:</label>
+                    <input type="email" id="mail" name="user_email">
+                </p> -->
+                <p>
+                    <label for="desc">Description:</label>
+                    <textarea id="desc" name="description"></textarea>
+                </p>
+                <p>
+                    <label for="due_date">Due date:</label>
+                    <input type="text" id="due_date" name="dueDate" placeholder="MM/YY">
+                </p>
+                <p>
+                    <label for="priority">Priority:</label>
+                    <select id="priority" name="Priority">
+                        <option value="high">High</option>
+                        <option value="low">Low</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="task_status">Task status</label>
+                    <input type="checkbox" id="task_status" name="taskStatus">
+                </p>
+                <p class="button">
+                    <button type="submit">Send your message</button>
+                </p>
+            </form>
+        </div>
+        <div id="footer">
+            gsincodes 2025
+        </div>
+        
+    </div>
+</body>
+</html>
