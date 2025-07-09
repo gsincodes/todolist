@@ -28,24 +28,14 @@
         </div>
         <div id="content">
             <div id="TODOS">
-                <div class="todo"></div>
-                <div class="todo"></div>
-                <div class="todo"></div>
-                <div class="todo"></div>
-                <div class="todo"></div>
-                <div class="todo"></div>
-                <div class="todo"></div>
-                <div class="todo"></div>
-                <div class="todo"></div>
-                <div class="todo"></div>
             </div>
             <button id="new-todo-btn">new ToDo</button>
         </div>
         <div id="form-container">
-                <form action="/my-handling-form-page" method="post" id="myForm">
+                <form method="get" id="myForm">
                 <p>
                     <label for="title">Title:</label>
-                    <input type:"text" id="name" name="title" value="title">
+                    <input type:"text" id="name" name="title" placeholder="title">
                 </p>
                 <!-- <p>
                     <label for="mail">Email:</label>
@@ -67,11 +57,11 @@
                     </select>
                 </p>
                 <p>
-                    <label for="task_status">Task status</label>
+                    <label for="task_status">Task status:</label>
                     <input type="checkbox" id="task_status" name="taskStatus">
                 </p>
                 <p class="button">
-                    <button type="submit">Send your message</button>
+                    <button id="add-todo-btn">Add new todo</button>
                 </p>
             </form>
         </div>
