@@ -16,7 +16,7 @@ p, div, li{
 }
 
 #halfscreen{
-    background-color: #d1d1d1;
+    background-color: #B7B7B7;
     /* border: 1px solid black; */
     grid-area: 2/2/3/3;
     z-index: -1;
@@ -30,7 +30,8 @@ p, div, li{
 }
 
 #sidebar{
-    background-color: #D8EFD3;
+    /* background-color: #7077A1; */
+    background-color: #526D82;
     grid-area: 1/1/5/2;
     display: grid;
     grid-template: 100px 1fr / 1fr;
@@ -46,9 +47,9 @@ p, div, li{
     font-style: italic;
     font-weight: bolder;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #7fb399;
-    color: rgb(255, 255, 255);
-    -webkit-text-stroke: 1px rgb(97, 97, 97);
+    background-color: #526D82;
+    color: white;
+    /* -webkit-text-stroke: 1px rgb(97, 97, 97); */
     border-bottom: 1px solid rgb(0, 0, 0);
 }
 
@@ -84,7 +85,8 @@ p, div, li{
 
 #navbar{
     grid-area: 1/2/2/3;
-    background-color: #D8EFD3;
+    /* background-color: #65647C; */
+    background-color: #27374D;
     display: grid;
     align-items: center;
     border-bottom: 1px solid black;
@@ -96,7 +98,7 @@ p, div, li{
 }
 
 #navbar>ul>li{
-    color: black;
+    color: white;
     display: inline;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 500;
@@ -118,7 +120,7 @@ p, div, li{
 }
 
 .todo{
-    background-color: yellow;
+    background-color: #faf4f5;
     border: 1px solid black;
     border-radius: 15px;
     height: 300px;
@@ -140,7 +142,7 @@ p, div, li{
 }
 
 #new-todo-btn{
-    background-color: rgb(94, 94, 255);
+    background-color: #7C96AB;
     color: white;
     height: 90px;
     width: 90px;
@@ -153,7 +155,7 @@ p, div, li{
 }
 
 #footer{
-    background-color: #60a381;
+    background-color: #27374D;
     grid-area: 4/2/5/3;
     color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -178,7 +180,7 @@ form{
   box-shadow: black 10px 5px;
   border-radius: 1em;
   /* text-align: center; */
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(235, 233, 233);
   z-index: 2;
 }
 
@@ -217,7 +219,7 @@ button{
   margin-left: 0.5em;
 }
 
-#add-todo-btn{
+#add-todo-btn, .confirm-edit-btn{
     padding: auto;
     height: 30px;
     width: 100px;
@@ -225,26 +227,31 @@ button{
     border-style: none;
     border: 1px solid black;
     border-radius: 15px;
-    background-color: rgb(94, 94, 255);
-    color: white;
+    background-color: #EDDBC7;
+    color: black;
     box-shadow: black 2px 2px;
 }
 
-#edit-button, #delete-button, #toggle-button{
-    background-color: rgb(114, 114, 255);
-    color: white;
+.edit-button, #delete-button, #toggle-button{
+    background-color: #EDDBC7;
+    color: black;
     border-style: none;
     height: 30px;
     font-size: medium;
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 20px;
     display: flex inline;
     justify-content: center;
     align-items: center;
     font-size: medium;
     border: 1px solid black;
+    box-shadow: black 2px 2px;
 }
 
 #toggle-button{
     margin-top: 15px;
+}
+
+.confirm-edit-btn{
+    margin-left: 70px;
 }

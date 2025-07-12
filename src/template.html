@@ -18,7 +18,7 @@
             <div id="logo">TASK MASTER</div>
             <div id="sidebar-menu">
                 <div class="sidebar-menu-item">Default Project</div>
-                <div class="sidebar-menu-item">Default Project</div>
+                <!-- <div class="sidebar-menu-item">Default Project</div> -->
             </div>
             <button id="new-project-btn">New Project</button>
         </div>
@@ -32,7 +32,7 @@
             <button id="new-todo-btn">new ToDo</button>
         </div>
         <div id="form-container">
-                <form method="get" id="myForm">
+                <form method="get" id="myForm" style="display: none;">
                 <p>
                     <label for="title">Title:</label>
                     <input type:"text" id="name" name="title" placeholder="title">
@@ -62,6 +62,7 @@
                 </p>
                 <p class="button">
                     <button id="add-todo-btn">Add new todo</button>
+                    <button class="confirm-edit-btn">Confirm Edit</button>
                 </p>
             </form>
         </div>
