@@ -32,14 +32,14 @@ p, div, li{
 #sidebar{
     /* background-color: #7077A1; */
     background-color: #526D82;
-    grid-area: 1/1/5/2;
-    display: grid;
-    grid-template: 100px 1fr / 1fr;
+    grid-area: 2/1/5/2;
+    /* display: grid; */
+    /* grid-template: 100px 1fr / 1fr; */
     border-right: 1px solid black;
 }
 
 #logo{
-    grid-row: 1/2;
+    grid-area: 1/1/2/2;
     text-align: center;
     display: grid;
     align-items: center;
@@ -56,20 +56,19 @@ p, div, li{
 #sidebar-menu{
     display: flex;
     flex-direction: column;
+    grid-column-end: 2;
 }
 
 .sidebar-menu-item{
-    /* length: 100px; */
     background-color: white;
-    border: 1px solid black;
-    justify-content: flex-end;
     text-align: end;
     padding: 5px;
     margin: 5px;
     border-radius: 3px;
-    font-weight:bold;
-    /* color: hsl(0, 0, 50); */
+    font-weight:600;
+    font-size:medium;
     box-shadow: black -5px 3px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #new-project-btn{
@@ -173,7 +172,7 @@ p, div, li{
     margin: auto;
 }
 
-form{
+#myForm{
   display: inline-block;
   padding: 1em;
   border: 1px solid black;
@@ -194,7 +193,7 @@ label{
   text-align: right;
 }
 
-input, textarea{
+#myForm >p> textarea, #myForm > p> input{
   font: 1em sans-serif;
   width: 300px;
   box-sizing: border-box;
@@ -223,13 +222,13 @@ button{
     padding: auto;
     height: 30px;
     width: 100px;
-    background-color: white;
     border-style: none;
     border: 1px solid black;
     border-radius: 15px;
-    background-color: #EDDBC7;
-    color: black;
+    background-color: #7C96AB;
+    color: white;
     box-shadow: black 2px 2px;
+    font-weight: 400;
 }
 
 .edit-button, #delete-button, #toggle-button{
@@ -254,4 +253,40 @@ button{
 
 .confirm-edit-btn{
     margin-left: 70px;
+}
+
+#project-form-container{
+    grid-area: 2/2/4/3;
+    margin: auto;
+}
+
+#project-form{
+    grid-column-end: 2;
+}
+
+#project-form {
+    /* display: inline-block; */
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 1em;
+    background-color: rgb(235, 233, 233);
+    box-shadow: black -4px 4px;
+    margin: 10px;
+}
+
+#project-form > p > input {
+    width: 100%;
+}
+
+#project-name-save-btn{
+    padding: auto;
+    height: 30px;
+    width: 100px;
+    border-style: none;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: #7C96AB;
+    color: white;
+    box-shadow: black 2px 2px;
+    font-weight: bold;
 }
