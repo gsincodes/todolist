@@ -50,15 +50,19 @@ renderProject();
 //Project Save Button
 project_name_save_btn.addEventListener("click", function(e){
 
-    e.preventDefault();
-    let project_name_input_value = project_name_input.value;
-    let newProject = new Project(project_name_input_value, `${project_name_input_value}Todos`);
-    allProjects.push(newProject);
-    renderProject();
-    renderTodos();
-    projectForm.style.display = "none";
-    projectForm.reset();
-    console.log(allProjects);
+    if(projectForm.checkValidity()){
+        let project_name_input_value = project_name_input.value;
+        let newProject = new Project(project_name_input_value, `${project_name_input_value}Todos`);
+        allProjects.push(newProject);
+        renderProject();
+        renderTodos();
+        projectForm.style.display = "none";
+        projectForm.reset();
+    }
+    else{
+        projectForm.reportValidity();
+    }
+    
 })
 
 function renderProject(){
@@ -224,7 +228,6 @@ function addTodoToProject(){
         const newTodo = new Todo(titleInputValue, descriptionInputValue, dueDateInputValue,priorityInputValue,taskStatusInputValue);
 
         currentProject.ProjectTodo.push(newTodo);
-        console.log(allProjects);
 }
 
 //NEW TODO BUTTON
