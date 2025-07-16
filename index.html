@@ -14,11 +14,9 @@
                 <li>About</li>
             </ul>
         </div>
+        <div id="logo">TASK MASTER</div>
         <div id="sidebar">
-            <div id="logo">TASK MASTER</div>
             <div id="sidebar-menu">
-                <div class="sidebar-menu-item">Default Project</div>
-                <div class="sidebar-menu-item">Default Project</div>
             </div>
             <button id="new-project-btn">New Project</button>
         </div>
@@ -28,24 +26,14 @@
         </div>
         <div id="content">
             <div id="TODOS">
-                <div class="todo"></div>
-                <div class="todo"></div>
-                <div class="todo"></div>
-                <div class="todo"></div>
-                <div class="todo"></div>
-                <div class="todo"></div>
-                <div class="todo"></div>
-                <div class="todo"></div>
-                <div class="todo"></div>
-                <div class="todo"></div>
             </div>
             <button id="new-todo-btn">new ToDo</button>
         </div>
         <div id="form-container">
-                <form action="/my-handling-form-page" method="post" id="myForm">
+                <form method="get" id="myForm" style="display: none;">
                 <p>
                     <label for="title">Title:</label>
-                    <input type:"text" id="name" name="title" value="title">
+                    <input type:"text" id="name" name="title" placeholder="title" required>
                 </p>
                 <!-- <p>
                     <label for="mail">Email:</label>
@@ -67,16 +55,29 @@
                     </select>
                 </p>
                 <p>
-                    <label for="task_status">Task status</label>
+                    <label for="task_status">Task status:</label>
                     <input type="checkbox" id="task_status" name="taskStatus">
                 </p>
                 <p class="button">
-                    <button type="submit">Send your message</button>
+                    <button id="add-todo-btn" type="submit">Add new todo</button>
+                    <button class="confirm-edit-btn" style="display: none;">Confirm Edit</button>
                 </p>
             </form>
         </div>
+        <div id="project-form-container">
+            <form method="get" id="project-form" style="display: none;">
+                <p>
+                    <label for="project-name">Enter Project Name:</label>
+                    <input id="project-name" type="text" name="projectName" required>
+                </p>
+                <p>
+                    <button id="project-name-save-btn">Save</button>
+                </p>
+            </form>
+        </div>
+        
         <div id="footer">
-            gsincodes 2025
+            &copy; gsincodes 2025
         </div>
         
     </div>
